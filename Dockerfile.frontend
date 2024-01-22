@@ -8,6 +8,8 @@ RUN npm install
 
 COPY frontend .
 
-EXPOSE 80
+RUN npm run build
 
-CMD ["npm", "run" , "start"]
+EXPOSE 3000
+
+CMD ["npm", "run", "preview"]
